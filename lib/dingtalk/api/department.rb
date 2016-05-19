@@ -5,7 +5,7 @@ module Dingtalk
         http_get("list?access_token=#{access_token}")
       end
 
-      def info dep_id
+      def get dep_id
         http_get("get?access_token=#{access_token}&id=#{dep_id}")
       end
 
