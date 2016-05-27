@@ -22,6 +22,10 @@ module Dingtalk
         http_post("create?access_token=#{access_token}", params)
       end
 
+      def get_list(dept_id, offset = 0, size = 100)
+        http_get("list?access_token=#{access_token}&department_id=#{dept_id}&offset=#{offset}&size=#{size}")
+      end
+
       private
         def base_url
           'user'
